@@ -20,3 +20,31 @@
       $ git branch -m [기존 이름] [새 이름]
   - 브랜치 삭제
       $ git branch -d [삭제할 브랜치]
+
+
+< 로컬에서 만든 브랜치를 원격 저장소에 Push >
+  1. $ git branch [새 브랜치 이름]
+                    from-local
+  2. $ git switch [브랜치 이름]
+                    from-local
+  3. $ git push --set-upstream [원격 저장소 이름] [원격 저장소의 브랜치 이름]
+                                    origin            from-local
+  4. $ git branch --all
+          : 로컬 컴퓨터와 원격 저장소의 모든 브랜치 확인
+
+
+< 원격 저장소의 브랜치를 로컬에 Pull >
+  1. 깃허브에서 브랜치 추가 (from-remote)
+  2. $ git fetch
+  3. $ git branch --all
+          : 원격 저장소에 추가된 브랜치 확인 가능
+  4. $ git switch -t [원격 저장소]/[원격 브랜치]
+                           origin/from-remote
+          : 원격 브랜치와 연결되어 이를 추적하는 브랜치를 로컬에 생성
+
+
+< 브랜치 삭제 >
+  - 원격 저장소의 브랜치 삭제
+      $ git push [원격 저장소] --delete [원격 저장소의 브랜치]
+  - 로컬의 브랜치 삭제
+      $ git branch -d [브랜치 이름]
