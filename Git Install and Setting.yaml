@@ -1,0 +1,27 @@
+< Git >
+  - VCS (Version Control System) : 프로그램 버전관리 툴
+  - Version : 프로그램 일부 내용이 변경되거나 새로운 기능이 추가되는 등 어떤 변화
+  - 개발 협업에 필수 도구
+
+
+< Git 사용 환경 >
+  - CLI (Git Bash 등)
+  - GUI (Source Tree 등)
+  - VS Code : 소스코드 편집기 => 코딩과 함께 바로 터미널에서 명령 입력 위함
+
+
+< Git 최초 설정 >
+  - 사용자 이름 및 이메일 설정
+      $ git config --global user.name "[사용자 이름]"
+      $ git config --global user.email "[사용자 이메일]"
+  - 기본 브랜치 이름 변경
+      기본 브랜치 이름이 master에서 main으로 변경
+      $ git config --global init.defaultBranch [main]
+
+
+< Git으로 프로젝트 관리 >
+  - .git 폴더 생성
+      Git이 관리하는 프로젝트 내역들을 담은 폴더
+  - 해당 프로젝트를 Git이 관리하도록 명령
+      $ git init
+      명령어 실행시 .git 폴더 생성됨

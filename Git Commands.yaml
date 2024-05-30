@@ -1,0 +1,39 @@
+< 프로젝트 상태 확인 >
+  $ git status
+    - 현재 폴더의 상황을 깃 관점으로 명시
+
+
+< Git에게 관리 맡기지 않기 >
+  - 자바의 .class 같은 빌드 결과물 등 프로젝트 관리 대상에 포함 불필요한 파일
+  - 보안상 민감한 정보의 파일
+  - Git으로 부터 격리하고 해당 파일들을 무시하도록 지정
+      1. ".gitignore" 파일 생성
+      2. 배제할 파일 이름을 입력 후 저장
+
+
+< Commit >
+  - 현재 작업한 파일 상태를 저장하는 것
+  - commit = version (거의 흡사한 의미)
+      1. 프로젝트에서 일어난 변화를 버전에 담기 (커밋의 준비 단계) 
+            - $ git add [추가할 파일]
+            - $ git add .
+                : 현재 폴더안의 모든 파일 add
+
+      2. 상태 확인
+            - $ git status
+            - No commits yet : 아직 커밋 없음
+            - Untracked files : 아직 깃이 관리하고있지 않은 파일
+            - Changes to be committed : 커밋할 대상
+            - Untracked files : add되지 않은 파일
+
+      3. 버전 커밋
+            - 새로운 버전을 만든다는 뜻
+            - $ git log
+                : 버전 히스토리 확인
+            - $ git commit -m "[커밋 메시지]"
+                : VIM에 들어가지 않고 바로 커밋
+            - $ git diff
+                : 변경사항 상세 보기
+            - $ git commit -am "[커밋 메시지]"
+                : git add 와 git commit 동시 실행
+                : 새로 추가된 파일 (Untracked file) 없을때만 가능
